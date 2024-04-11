@@ -1,0 +1,30 @@
+#define SIMPLE_PEBS_BASE 	0x7000
+#define SIMPLE_PEBS_SET_CPU    	(SIMPLE_PEBS_BASE + 1)
+#define SIMPLE_PEBS_GET_SIZE   	(SIMPLE_PEBS_BASE + 2)
+#define SIMPLE_PEBS_GET_OFFSET 	(SIMPLE_PEBS_BASE + 3)
+#define SIMPLE_PEBS_START	(SIMPLE_PEBS_BASE + 4)
+#define SIMPLE_PEBS_STOP	(SIMPLE_PEBS_BASE + 5)
+#define SIMPLE_PEBS_RESET	(SIMPLE_PEBS_BASE + 6)
+
+#define GET_CURRENT_REFERENCE	0x8000
+#define GET_CURRENT_MISS	0x8001
+#define GET_CURRENT_CYCLE	0x8002
+#define GET_CURRENT_INSTR	0x8003
+#define GET_PID			0x8004
+
+#define INIT_REFERENCE  0x8005
+#define INIT_MISS 0x8006
+#define INIT_INSTR  0x8007  
+#define INIT_CYCLE  0x8008
+#define STOP_REFERENCE  0x8009
+#define STOP_MISS 0x8010
+#define STOP_INSTR  0x8011
+#define STOP_CYCLE  0x8012
+#define SET_MON_NUM 0x8013
+
+struct mon_set_para{
+  int num;/*num_mon_set*/
+  int index0;/*mon_set0*/
+};
+
+
